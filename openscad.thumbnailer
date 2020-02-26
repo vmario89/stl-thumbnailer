@@ -1,0 +1,6 @@
+[Thumbnailer Entry]
+Exec=/usr/local/bin/stl_thumb.py %i %o %s
+MimeType=application/x-openscad;
+
+
+
