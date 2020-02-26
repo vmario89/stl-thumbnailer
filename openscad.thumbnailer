@@ -1,6 +1,3 @@
 [Thumbnailer Entry]
-Exec=/usr/local/bin/stl_thumb.py %i %o %s
+Exec=openscad -o %o --preview --imgsize=%s,%s %i
 MimeType=application/x-openscad;
-
-
-

@@ -2,6 +2,10 @@
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
    <mime-type type="application/sla">
      <comment>stereolithography</comment>
+     <magic priority="50">
+      <match type="string" value="solid" offset="0"/>
+      <match type="string" value="SOLID" offset="0"/>
+    </magic>
      <glob pattern="*.stl"/>
    </mime-type>
 </mime-info>
