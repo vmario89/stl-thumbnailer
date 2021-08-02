@@ -3,8 +3,8 @@
 #install openscad
 sudo dnf install openscad
 
-sudo cp -rf stl_thumb.py /usr/local/bin/
-sudo chmod a+x /usr/local/bin/stl_thumb.py
+sudo cp -rf stl_thumb.py /usr/bin/
+sudo chmod a+x /usr/bin/stl_thumb.py
 sudo cp -rf stl.thumbnailer /usr/share/thumbnailers/
 sudo cp -rf openscad.thumbnailer /usr/share/thumbnailers/
 
