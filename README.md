@@ -15,8 +15,8 @@ clone from repository
 
 	#as default user, not root
 	cd ~
-    git clone https://github.com/MLAB-project/stl-thumbnailer.git
-    cd stl-thumbnailer
+    git clone https://github.com/vmario89/stl-thumbnailer.git
+    cd stl-thumbnailer/
 
 	./install.sh
 

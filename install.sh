@@ -3,11 +3,6 @@
 #install openscad
 sudo dnf install openscad
 
-#as default user, not root
-cd ~
-git clone https://github.com/vmario89/stl-thumbnailer.git
-cd stl-thumbnailer
-
 sudo cp -rf stl_thumb.py /usr/local/bin/
 sudo chmod a+x /usr/local/bin/stl_thumb.py
 sudo cp -rf stl.thumbnailer /usr/share/thumbnailers/
