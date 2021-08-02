@@ -3,7 +3,7 @@ Shows thumbnails of STL files in Nautilus file browser. The sources are based on
 
 ![STL preview of folder](STL-thumbnailer_screenshot.png)
 
-## Install (Fedora)
+## Install (Fedora 34)
 
 ### Install OpenSCAD
 
@@ -35,7 +35,7 @@ After that you should update MIME database by runnig following commands:
 
   - update mime database :
 
-        update-mime-database /usr/share/mime/
+        sudo update-mime-database /usr/share/mime/
 
   - clear thumbnails cache :
 
