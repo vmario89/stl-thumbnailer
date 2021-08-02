@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import os
 import sys
@@ -17,13 +17,13 @@ def main():
     ff = "/tmp/stl_to_png_%s.scad" % m.hexdigest()
 
     f = open(ff, "w")
-    f.write("import(\"%s\");" % fin)
+    f.write("import(\"{}\");".format(fin.decode("UTF-8")))
     f.close()
 
     cmd = "openscad -o %s.png --imgsize=%s,%s %s 2> /dev/null; mv %s.png %s" % (fout, size, size, ff, fout, fout)
     os.system(cmd)
 
-    os.remove(ff)
+    #os.remove(ff)
 
     sys.exit(0)
 
@@ -34,10 +34,10 @@ if __name__ == '__main__':
     f.close()
 
     if len(sys.argv) != 4:
-        print "add args [in file] [out file] [size]"
+        print("add args [in file] [out file] [size]")
         sys.exit(0)
     else:
-        fin = sys.argv[1]
+        fin = sys.argv[1].encode("UTF-8")
         fout = sys.argv[2]
         size = sys.argv[3]
 
