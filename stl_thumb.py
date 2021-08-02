@@ -17,13 +17,13 @@ def main():
     ff = "/tmp/stl_to_png_%s.scad" % m.hexdigest()
 
     f = open(ff, "w")
-    f.write("import(\"{}\");".format(fin.decode("UTF-8")))
+    f.write("import(\"{}\");".format(fin.decode("UTF-8"))) #should be an absolute path. Do not use relative path for paths containing ~. OpenSCAD will not render the file
     f.close()
 
     cmd = "openscad -o %s.png --imgsize=%s,%s %s 2> /dev/null; mv %s.png %s" % (fout, size, size, ff, fout, fout)
     os.system(cmd)
 
-    #os.remove(ff)
+    os.remove(ff)
 
     sys.exit(0)
 

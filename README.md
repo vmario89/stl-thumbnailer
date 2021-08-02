@@ -53,6 +53,7 @@ Now the STL thumbnails should show-up. If not, you can try:
 ### Testing thumbnail generator
 	cd ~/stl-thumbnailer
 	python3 stl_thumb.py "~/stl-thumbnailer/65mm.stl" 65mm.png 256
+	eog 65mm.png #view the generated thumb. should show the correct model file. If not: check out the temporarily generated scad file in tmp dir
 
 ### Thumbnails preview from OpenSCAD files
 
