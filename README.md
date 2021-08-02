@@ -35,7 +35,7 @@ After that you should update MIME database by runnig following commands:
 
   - update mime database :
 
-        update-mime-database ~/.local/share/mime/
+        update-mime-database /usr/share/mime/
 
   - clear thumbnails cache :
 
