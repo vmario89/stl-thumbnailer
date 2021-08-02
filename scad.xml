@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+   <mime-type type="application/x-openscad">
+     <comment>OpenSCAD design file</comment>
+     <magic priority="50">
+      <match type="string" value="solid" offset="0"/>
+      <match type="string" value="SOLID" offset="0"/>
+    </magic>
+     <glob pattern="*.scad"/>
+     <icon name="openscad"/>
+     <alias type="application/x-openscad"/>
+   </mime-type>
+</mime-info>
+
