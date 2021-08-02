@@ -23,6 +23,7 @@ def main():
         shutil.copyfile(fin.decode("UTF-8"), ff)
     except Exception as e:
         print("Copy error")
+        print(e)
  
     cmd = "openscad -o %s.png --imgsize=%s,%s %s 2> /dev/null; mv %s.png %s" % (fout, size, size, ff, fout, fout)
     os.system(cmd)

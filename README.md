@@ -1,11 +1,9 @@
 # stl-thumbnailer
-Shows thumbnails of STL files in Nautilus file browser. The sources are based on [linux nautilus stl thumbnailer :)](http://www.thingiverse.com/thing:258653)
+Shows thumbnails of .stl and .scad files in Nautilus file browser. The sources are based on [linux nautilus stl thumbnailer :)](http://www.thingiverse.com/thing:258653)
 
-![STL preview of folder](STL-thumbnailer_screenshot.png)
+![Example: STL preview of folder](STL-thumbnailer_screenshot.png)
 
-## Install (Fedora 34)
-
-### Install OpenSCAD
+## Installation (Fedora 34)
 
 This project use [OpenSCAD](http://www.openscad.org/) for thumbnails preview
 
@@ -31,5 +29,8 @@ Rrefresh (F5 or crtl-r) Nautilus showing a folder containing some stl files. Now
 
 ### Testing thumbnail generator
 	cd ~/stl-thumbnailer
-	python3 stl_thumb.py "~/stl-thumbnailer/65mm.stl" 65mm.png 256
+	python3 stl_thumb.py "~65mm.stl" 65mm.png 256 #testing stl
 	eog 65mm.png #view the generated thumb. should show the correct model file. If not: check out the temporarily generated scad file in tmp dir
+
+	python3 scad_thumb.py "logo.scad" logo.png 256 #testing scad
+	eog logo.png #view the generated thumb. should show the correct model file. If not: check out the temporarily generated scad file in tmp dir
