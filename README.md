@@ -23,8 +23,11 @@ clone from repository
     sudo cp stl_thumb.py /usr/local/bin/
     sudo chmod a+x /usr/local/bin/stl_thumb.py
     sudo cp stl.thumbnailer /usr/share/thumbnailers/
+    sudo cp openscad.thumbnailer /usr/share/thumbnailers/
+
 	sudo mkdir -p ~/.local/share/mime/packages/
     sudo cp stl.xml ~/.local/share/mime/packages/
+    sudo cp openscad.xml ~/.local/share/mime/packages/
 
 (note that it's also possible to keep files in the current dir, and only make symlinks. In that case, you'll have to edit `stl.thumbnailer` file and adapt the `Exec=` line to make it point to actual directory)
 
