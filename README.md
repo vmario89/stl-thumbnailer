@@ -7,9 +7,7 @@ Shows thumbnails of STL files in Nautilus file browser. The sources are based on
 
 ### Install OpenSCAD
 
-This project use [OpenSCAD](http://www.openscad.org/) for thumbnails preview. You must install OpenSCAD before using it.
-
-	sudo dnf install openscad
+This project use [OpenSCAD](http://www.openscad.org/) for thumbnails preview
 
 ### Install stl-thumbnailer
 
@@ -20,30 +18,9 @@ clone from repository
     git clone https://github.com/MLAB-project/stl-thumbnailer.git
     cd stl-thumbnailer
 
-    sudo cp stl_thumb.py /usr/local/bin/
-    sudo chmod a+x /usr/local/bin/stl_thumb.py
-    sudo cp stl.thumbnailer /usr/share/thumbnailers/
-    sudo cp openscad.thumbnailer /usr/share/thumbnailers/
+	./install.sh
 
-	#copy mime files. By installing OpenSCAD, an openscad.xml is automatically put in the correct target path
-    sudo cp stl.xml /usr/share/mime/packages/
-
-(note that it's also possible to keep files in the current dir, and only make symlinks. In that case, you'll have to edit `stl.thumbnailer` file and adapt the `Exec=` line to make it point to actual directory)
-
-After that you should update MIME database by runnig following commands:
-(adapt to your Linux distribution)
-
-  - update mime database :
-
-        sudo update-mime-database /usr/share/mime/
-
-  - clear thumbnails cache :
-
-        rm -rf ~/.cache/thumbnails/*
-
-  - refresh (F5 or crtl-r) Nautilus showing a folder containing some stl files
-
-Now the STL thumbnails should show-up. If not, you can try:
+Rrefresh (F5 or crtl-r) Nautilus showing a folder containing some stl files. Now the STL thumbnails should show-up. If not, you can try:
 
   - close Nautilus :
 
@@ -56,7 +33,3 @@ Now the STL thumbnails should show-up. If not, you can try:
 	cd ~/stl-thumbnailer
 	python3 stl_thumb.py "~/stl-thumbnailer/65mm.stl" 65mm.png 256
 	eog 65mm.png #view the generated thumb. should show the correct model file. If not: check out the temporarily generated scad file in tmp dir
-
-### Thumbnails preview from OpenSCAD files
-
-If you looking for an preview generated from .scad files you could check [OpenSCAD Thumbnailer for Gnome](http://srlm.io/2015/12/15/scad-thumbnailer/) but computing power required for rendering more complicated scad model could be prohibitive to use this approach.

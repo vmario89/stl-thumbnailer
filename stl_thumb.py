@@ -23,7 +23,7 @@ def main():
     cmd = "openscad -o %s.png --imgsize=%s,%s %s 2> /dev/null; mv %s.png %s" % (fout, size, size, ff, fout, fout)
     os.system(cmd)
 
-    os.remove(ff)
+    #os.remove(ff)
 
     sys.exit(0)
 
