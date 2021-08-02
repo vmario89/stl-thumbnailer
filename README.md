@@ -3,23 +3,28 @@ Shows thumbnails of STL files in Nautilus file browser. The sources are based on
 
 ![STL preview of folder](STL-thumbnailer_screenshot.png)
 
-## Install
+## Install (Fedora)
 
 ### Install OpenSCAD
 
 This project use [OpenSCAD](http://www.openscad.org/) for thumbnails preview. You must install OpenSCAD before using it.
 
+	sudo dnf install openscad
+
 ### Install stl-thumbnailer
 
 clone from repository
 
+	#as default user, not root
+	cd ~
     git clone https://github.com/MLAB-project/stl-thumbnailer.git
     cd stl-thumbnailer
 
     sudo cp stl_thumb.py /usr/local/bin/
     sudo chmod a+x /usr/local/bin/stl_thumb.py
     sudo cp stl.thumbnailer /usr/share/thumbnailers/
-    cp stl.xml ~/.local/share/mime/packages/
+	sudo mkdir -p ~/.local/share/mime/packages/
+    sudo cp stl.xml ~/.local/share/mime/packages/
 
 (note that it's also possible to keep files in the current dir, and only make symlinks. In that case, you'll have to edit `stl.thumbnailer` file and adapt the `Exec=` line to make it point to actual directory)
 
@@ -29,7 +34,6 @@ After that you should update MIME database by runnig following commands:
   - update mime database :
 
         update-mime-database ~/.local/share/mime/
-        sudo update-mime
 
   - clear thumbnails cache :
 
@@ -45,6 +49,10 @@ Now the STL thumbnails should show-up. If not, you can try:
 
   - and start it again
   - in last hope, you can try to log out and login to the desktop
+
+### Testing thumbnail generator
+	cd ~/stl-thumbnailer
+	python3 stl_thumb.py "~/stl-thumbnailer/65mm.stl" 65mm.png 256
 
 ### Thumbnails preview from OpenSCAD files
 
