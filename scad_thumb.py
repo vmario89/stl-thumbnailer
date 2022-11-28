@@ -12,12 +12,9 @@ size = ""
 
 def main():
     m = hashlib.md5()
-    m.update(fin)
+    m.update(fin.encode('utf8'))
 
     ff = "/tmp/scad_to_png_%s.scad" % m.hexdigest()
-
-    m = hashlib.md5()
-    m.update(fin)
 
     try:
         shutil.copyfile(fin.decode("UTF-8"), ff)
