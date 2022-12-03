@@ -12,8 +12,7 @@ size = ""
 
 def main():
     m = hashlib.md5()
-    m.update(fin.encode('utf8'))
-
+    m.update(fin)
     ff = "/tmp/scad_to_png_%s.scad" % m.hexdigest()
 
     try:
